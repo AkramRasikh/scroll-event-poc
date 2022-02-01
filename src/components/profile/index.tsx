@@ -22,6 +22,7 @@ const Profile = ({
   name,
   age,
   occupation,
+  image,
   addYAxisToArr,
 }: ProfileProps) => {
   const profileRef = React.useRef(null);
@@ -51,11 +52,7 @@ const Profile = ({
       ref={profileRef}
     >
       <div>
-        <img
-          src={avatarImage}
-          alt={`image-${name}`}
-          onLoad={() => setLoaded(true)}
-        />
+        <img src={image} alt={`image-${name}`} onLoad={() => setLoaded(true)} />
       </div>
       <div>
         <p>
